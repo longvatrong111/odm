@@ -1,0 +1,7 @@
+function number(schemaType, value) {
+    if ((schemaType.min && value < schemaType.min) || (schemaType.max && value > schemaType.max))
+        return false;
+    return true;
+}
+
+module.exports = number;
